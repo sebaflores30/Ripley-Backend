@@ -12,7 +12,7 @@ conexionDB();
 
 //settings
 app.set("name", "rest-api-nodejs");
-app.set("port", process.env.port || 3000);
+app.set("port", process.env.PORT|| 3000);
 app.set("host", process.env.HOST || '0.0.0.0');
 
 
