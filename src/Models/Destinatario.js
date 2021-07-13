@@ -9,7 +9,8 @@ const destinatarioSchema = new Schema({
     cuenta: String,
     tpo_cuenta: String,
     banco: String,
-    origen: String
+    origen: String,
+    telefono: String
 
 });
 
