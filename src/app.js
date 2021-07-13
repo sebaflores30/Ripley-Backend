@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const morgan = require("morgan");
 const conexionDB = require("./db.conexion");
 const routerClientes = require("./routes/cliente.route");
@@ -14,9 +15,12 @@ conexionDB();
 app.set("name", "rest-api-nodejs");
 app.set("port", process.env.PORT|| 3000);
 app.set("host", process.env.HOST || '0.0.0.0');
+//app.set("host", 'http://localhost:');
+
 
 
 app.use(express.json());
+app.use(cors());
 
 //middelware
 app.use(express.json());
