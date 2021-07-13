@@ -24,6 +24,7 @@ destinatario.cuenta = req.body.cuenta;
 destinatario.tpo_cuenta = req.body.tpo_cuenta;
 destinatario.banco = req.body.banco;
 destinatario.origen = req.body.origen;
+destinatario.telefono = req.body.telefono;
 
 destinatario.save(function(err) {
   if (err) return console.error(err);
