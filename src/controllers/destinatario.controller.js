@@ -27,8 +27,8 @@ destinatario.origen = req.body.origen;
 destinatario.telefono = req.body.telefono;
 
 destinatario.save(function(err) {
-  if (err) return console.error(err);
-  res.end();
+  if (err) return res.error(err).json;
+  
 });
    
   }
