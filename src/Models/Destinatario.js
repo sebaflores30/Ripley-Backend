@@ -7,13 +7,13 @@ const destinatarioSchema = new Schema({
     rut: String,
     correo: String,
     cuenta: {
-        type: Number,
+        type: String,
         required: true,
         unique: true
     },
     tpo_cuenta: String,
     banco: String,
-    origen: Number,
+    origen: String,
     telefono: String
 
 });
