@@ -15,24 +15,21 @@ exports.obtener = ( async (req, res) => {
 )
 
 exports.crear = ( async (req, res) => {
+  try {
+    const transacciondata = await Historial.create(req.body);
+    res.status(200).json({
+      status: 200,
+      data: transacciondata
 
-  console.log(req.body);
-let transaccion = new Historial();
-transaccion.nom_dest = req.body.nom_dest;
-transaccion.origen = req.body.origen;
-transaccion.banco = req.body.banco;
-transaccion.comentario = req.body.comentario;
-transaccion.cuenta = req.body.cuenta;
-transaccion.fecha = req.body.fecha;
-transaccion.monto = req.body.monto;
-transaccion.nro_transaccion = req.body.nro_transaccion;
-transaccion.rut = req.body.rut;
-transaccion.tpo_cuenta = req.body.tpo_cuenta;
+    })
 
-transaccion.save(function(err) {
-  if (err) return console.error(err);
-  res.end();
-});
+  } catch (error) {
+    res.status(400).json({
+      status: 400,
+      mensage: error
+    })
+
+  }
    
   }
 )
