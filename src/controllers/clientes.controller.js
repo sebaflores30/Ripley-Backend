@@ -6,7 +6,7 @@ exports.obtener = ( async (req, res) => {
   let pass= req.params.pass;
 
     try {
-        const clientes = await Cliente.find({ rut: rut, pass: pass }) 
+        const clientes = await Cliente.findOne({ rut: rut, pass: pass }) 
         res.json(clientes);
     } catch (error) {
         res.json(error);
