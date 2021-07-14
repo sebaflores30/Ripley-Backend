@@ -6,7 +6,11 @@ const destinatarioSchema = new Schema({
     nombre: String,
     rut: String,
     correo: String,
-    cuenta: String,
+    cuenta: {
+        type: Number,
+        required: true,
+        unique: true
+    },
     tpo_cuenta: String,
     banco: String,
     origen: String,
