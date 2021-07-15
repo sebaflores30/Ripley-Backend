@@ -30,6 +30,5 @@ exports.crear = (async (req, res) => {
     })
 
   }
-
 }
 )
