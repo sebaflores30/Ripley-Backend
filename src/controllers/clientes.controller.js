@@ -14,3 +14,6 @@ exports.obtener = (async (req, res) => {
 
 }
 )
+exports.actualizar = (req, res) => {
+  res.json('Sebastian1991')
+}
