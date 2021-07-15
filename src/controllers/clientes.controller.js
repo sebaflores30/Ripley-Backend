@@ -14,4 +14,3 @@ exports.obtener = (async (req, res) => {
 
 }
 )
-
